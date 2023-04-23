@@ -1,0 +1,30 @@
+CREATE KEYSPACE liphaqolaCTMS WITH REPLICATION - { 'class' : 'NetworkTopologyStrategy', 'datacenter1' : 3 };
+
+CREATE TABLE liphaqolaCTMS.protocol (study_id int, title text, sponsor text, objectives text, PRIMRY KEY (study_id));
+
+CREATE TABLE liphaqolaCTMS.protocol (study_id int, title text, sponsor text, objectives text, PRIMARY KEY (study_id));
+cqlsh> CREATE TABLE liphaqolaCTMS.protocol (study_id int, title text, sponsor text, objectives text, PRIMRY KEY (study_id));
+cqlsh> CREATE TABLE liphaqolaCTMS.participant (participant_id int, first_name text, last_name text, age int, contact text, study_id int, PRIMARY KEY (participant_id));
+cqlsh> CREATE TABLE liphaqolaCTMS.drug (drug_id int, drug_name text, dosage decimal, study_id int, PRIMARY KEY (drug_id));
+cqlsh> INSERT INTO liphaqolaCTMS.study_site (site_name, location, facilities, equipment) VALUES ('MokhotlongCMTS', 'Mokhotlong', 'Clinical Research', 'MRI Scanners');
+cqlsh> INSERT INTO liphaqolaCTMS.study_site (site_name, location, facilities, equipment) VALUES ('QachaCMTS', 'Qacha', 'Univeristy Lab', 'X-Ray Scanners');
+
+cqlsh> INSERT INTO liphaqolaCTMS.study_site (site_name, location, facilities, equipment) VALUES ('MaseruCMTS', 'Maseru', 'Hospial Lab', 'ElectroCardiogram');
+
+cqlsh> INSERT INTO liphaqolaCTMS.study_site (site_name, location, facilities, equipment) VALUES ('LeribeCMTS', 'Leribe', 'Independent Research', 'ElectroCardiogram');
+cqlsh> INSERT INTO liphaqolaCTMS.protocol (study_id, title, sponsor, objectives) VALUES (100, 'Nutritional Study', 'Minister of Security', 'Dietrary Intervention');
+cqlsh> INSERT INTO liphaqolaCTMS.protocol (study_id, title, sponsor, objectives) VALUES (101, 'Observational', 'Minister of Security', 'Cross-Sectional Studies');
+cqlsh> INSERT INTO liphaqolaCTMS.protocol (study_id, title, sponsor, objectives) VALUES (102, 'Medical Device', 'Minister of Health', 'Feasibility Study');
+cqlsh> INSERT INTO liphaqolaCTMS.protocol (study_id, title, sponsor, objectives) VALUES (103, 'Drug Development', 'Minister of Health', 'Marketing Surveillance');
+cqlsh> SELECT * FROM liphaqolaCTMS.protocol;
+
+cqlsh> INSERT INTO liphaqolaCTMS.participant (participant_id, first_name, last_name, age, contact, study_id) VALUES (1000, 'Lerato', 'Motlomelo', 23, '53216540', 100);
+cqlsh> INSERT INTO liphaqolaCTMS.participant (participant_id, first_name, last_name, age, contact, study_id) VALUES (1001, 'Noka', 'Basia', 28, '53219740', 100);
+cqlsh> INSERT INTO liphaqolaCTMS.participant (participant_id, first_name, last_name, age, contact, study_id) VALUES (1002, 'Thabo', 'Moshe', 30, '53228440', 101);
+cqlsh> INSERT INTO liphaqolaCTMS.participant (participant_id, first_name, last_name, age, contact, study_id) VALUES (1003, 'Rabasotho', 'Mosese', 37, '59221230', 102cqlsh> SELECT * FROM liphaqolaCTMS.participant;
+
+cqlsh> INSERT INTO liphaqolaCTMS.drug (drug_id,drug_name, dosage, study_id) VALUES (9010, 'Pfizer', '2.21 ml', 100);
+cqlsh> INSERT INTO liphaqolaCTMS.drug (drug_id,drug_name, dosage, study_id) VALUES (9011, 'Johnson & Johnson', '0.57 ml', 101);
+cqlsh> INSERT INTO liphaqolaCTMS.drug (drug_id,drug_name, dosage, study_id) VALUES (9012, 'AbbVie', '1.34 ml', 102);
+cqlsh> INSERT INTO liphaqolaCTMS.drug (drug_id,drug_name, dosage, study_id) VALUES (9013, 'Bayer', '3.00 ml', 103);
+cqlsh> INSERT INTO liphaqolaCTMS.drug (drug_id,drug_name, dosage, study_id) VALUES (9014, 'Moderna', '1.00 ml', 104);
