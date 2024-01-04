@@ -1,0 +1,44 @@
+@import "./../styles/variables.scss";
+@import "./../styles/index.scss";
+
+.home {
+    background: $light;
+    align-items: center;
+    height:auto;
+
+    &__content {
+        overflow: hidden;
+
+        h1 {
+            text-align: center;
+        }
+
+        ul {
+            font-size: x-large;
+            display: list-item;
+            flex-direction: column;
+            justify-content: center;
+            
+            li {
+                padding: 25px;
+                color: black;
+
+                a:link {
+                    color: black;
+                    font-weight: bold;
+                    text-decoration: none;
+                    font-size: 2rem;
+
+                    cursor: pointer;
+                    outline: none;
+                    padding: 0.75rem 1.25rem;
+                    border-radius: $borderRadius;
+                }
+
+                &:hover {
+                    background: rgba($light, 0.1);
+                } 
+            }
+        }
+    }    
+}

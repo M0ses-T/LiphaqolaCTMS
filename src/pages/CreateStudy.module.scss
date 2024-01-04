@@ -1,0 +1,39 @@
+@import "./../styles/variables.scss";
+@import "./../styles/index.scss";
+
+.createstudy {
+    background: $light;
+    align-items: center;
+    height:auto;
+
+    &__content {
+        overflow: hidden;
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            padding: 50px;
+            background-color: white;
+            width: 400px;
+            gap: 20px;
+
+            input {
+                padding: 10px;
+                border: none;
+                border-bottom: 1px solid gray;
+            }
+
+            button {
+                padding: 10px;
+                border: none;
+                background-color: rgb(117, 201, 250);
+                cursor: pointer;
+                color: white;
+            }
+        }
+    }
+}
