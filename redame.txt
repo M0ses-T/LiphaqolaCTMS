@@ -28,3 +28,4 @@ cqlsh> INSERT INTO liphaqolaCTMS.drug (drug_id,drug_name, dosage, study_id) VALU
 cqlsh> INSERT INTO liphaqolaCTMS.drug (drug_id,drug_name, dosage, study_id) VALUES (9012, 'AbbVie', '1.34 ml', 102);
 cqlsh> INSERT INTO liphaqolaCTMS.drug (drug_id,drug_name, dosage, study_id) VALUES (9013, 'Bayer', '3.00 ml', 103);
 cqlsh> INSERT INTO liphaqolaCTMS.drug (drug_id,drug_name, dosage, study_id) VALUES (9014, 'Moderna', '1.00 ml', 104);
+
